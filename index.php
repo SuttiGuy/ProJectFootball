@@ -14,50 +14,40 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="data/css/styles.css" rel="stylesheet" />
     <link href="data/css/css.css" rel="stylesheet" />
+    <link href="data/css/body.css" rel="stylesheet" />
+
     <script src="https://kit.fontawesome.com/c150442d6f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <!-- Bootstrap CSS -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand" href="index.php"><i class="bi bi-globe2"></i>&nbsp;Football World Club </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-lg-4">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="index.php">หน้าหลัก</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
+                            จัดการนักเตะ
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="view/view_add_form.php">เพิ่มนักเตะ</a></li>
+                            <li><a class="dropdown-item" href="view/view_edit.php">แก้ไขนักเตะ</a></li>
+                            <li><a class="dropdown-item" href="view/view_delete.php">ลบนักเตะ</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </div>
+            <form class="d-flex" action="view/view_search.php" method="get">
+                <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="keywords"
+                    autocomplete="off">
+                <button class="btn btn-outline-light" type="submit" value="Search"> <i
+                        class="fas fa-search"></i></button>
+            </form>
         </div>
     </nav>
     <!-- Recommend-->
@@ -74,18 +64,18 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <?php
-                        include "view/view_recommend.php";
-                    ?>
+            include "view/view_recommend.php";
+        ?>
                 </div>
                 <div class="carousel-item">
                     <?php
-                include "view/view_recommend.php";
-            ?>
+            include "view/view_recommend.php";
+        ?>
                 </div>
                 <div class="carousel-item">
                     <?php
-                include "view/view_recommend.php";
-            ?>
+            include "view/view_recommend.php";
+        ?>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
@@ -107,21 +97,15 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-lg-4">
                     <form action="view/view_year.php" method="GET" class="d-flex">
                         <select class="form-control me-2" name="cs_year" id="cs_year" onchange="this.form.submit();">
-                            <option disabled selected hidden><i class="fas fa-search">คลิกเพื่อกรองหลักสูตรตามปี
+                            <option disabled selected hidden><i class="fas fa-search">คลิกเพื่อกรองนักเตะตามปี
                                     &nbsp;&nbsp;
-                                    ʕᴥ• ʔ👎🏻</i></option>
-                            <option value="2021">หลักสูตรปี 2021</option>
-                            <option value="2022">หลักสูตรปี 2022</option>
-                            <option value="2023">หลักสูตรปี 2023</option>
+                                    🏆</i></option>
+                            <option value="2021">??</option>
+                            <option value="2022">??</option>
+                            <option value="2023">??</option>
                         </select>
                     </form>
                 </ul>
-                <form class="d-flex" action="view/view_search.php" method="get">
-                    <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search"
-                        name="keywords" autocomplete="off">
-                    <button class="btn btn-outline-dark" type="submit" value="Search"> <i
-                            class="fas fa-search"></i></button>
-                </form>
             </div>
         </div>
     </nav>
@@ -130,8 +114,8 @@
         <div class="container-fluid px-4 px-lg-5 mt-5">
             <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 <?php
-                        include "controller/con_card_course_index.php";
-                    ?>
+                    include "controller/controllerUser.php";
+                ?>
             </div>
         </div>
     </section>
@@ -149,11 +133,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="data/js/scripts.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-
 </body>
 
 </html>
