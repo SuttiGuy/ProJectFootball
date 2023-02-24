@@ -1,8 +1,8 @@
 <?php
     include_once 'model/ConDB.php';
     include_once 'model/Course.php';
-    $obj_name = new Course();
-    $rs2 = $obj_name->getCourse();
+    $obj_name = new Team();
+    $rs2 = $obj_name->getTeam();
 
     // Read JSON Decode From encode to decode
     $jsonCode = $rs2;

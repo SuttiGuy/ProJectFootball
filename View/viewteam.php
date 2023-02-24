@@ -1,7 +1,7 @@
 <!-- Course section -->
 <div class="col mb-5">
     <div class="card h-150">
-        <a href="view/view_detail_course.php?cs_id=<?=$result2['identifier']?>" class="card-link">
+        <a href="view/viewteam-detail.php?identifier=<?=$result2['identifier']?>" class="card-link">
             <!-- Product image-->
             <img class="card-img-top" src="data/images/<?=$result2['image'];?>" alt="..." />
             <!-- Product details-->

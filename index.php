@@ -97,7 +97,7 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-lg-4">
                     <form action="view/view_year.php" method="GET" class="d-flex">
                         <select class="form-control me-2" name="cs_year" id="cs_year" onchange="this.form.submit();">
-                            <option disabled selected hidden><i class="fas fa-search">คลิกเพื่อกรองนักเตะตามปี
+                            <option disabled selected hidden><i class="fas fa-search">คลิกเพื่อกรองนักเตะตามทีม
                                     &nbsp;&nbsp;
                                     🏆</i></option>
                             <option value="2021">??</option>
