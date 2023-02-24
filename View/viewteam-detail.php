@@ -3,12 +3,13 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>สร้าง QR code</title>
-
+    <title>ฟุตบอลโลก</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
@@ -16,9 +17,11 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../data/css/styles.css">
     <script src="https://kit.fontawesome.com/c150442d6f.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c150442d6f.js" crossorigin="anonymous"></script>
+    <link href="../data/css/body.css" rel="stylesheet" />
 </head>
 
-<body background="../data/images/BG.png">
+<body>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid px-4 px-lg-5">
@@ -28,7 +31,6 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-lg-4">
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="index.php">หน้าหลัก</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -51,57 +53,37 @@
                 <div class="card p-3 border" style="background-image: url('../data/images/BG-D.png');">
                     <br>
                     <center>
-                        <h1><i class="fas fa-user">&nbsp;&nbsp;</i>                            
-                            <?=$jsonDecode['first_name'];?> 
-                            <?=$jsonDecode['last_name'];?></h1>
+                        <h1><i class="fas fa-user">&nbsp;&nbsp;</i>
+                            <?=$jsonDecode['first_name'];?>
+                            <?=$jsonDecode['last_name'];?>
+                        </h1>
                     </center>
                     <div class="d-flex">
                         <div class="col col-5 ms-5">
-                            <form name="frmadd" method="GET" action="../indexLogin.php"
-                                enctype="multipart/form-data">
-                                <br>
-                                <br>
-                                <h4><label for="id">Username</label></h4><!--หัวข้อ-->
-                                <input type="text" class="form-control" id="username" name="username"
-                                    placeholder="กรุณากรอก Username">
-                                <br>
-                                <h4><label for="pass">Password</label></h4><!--หัวข้อ-->
-                                <input type="password" class="form-control" id="password" name="password"
-                                    placeholder="กรุณากรอก Password">
-                                <br>
-                                <left>
-                                    <input class="form-check-input" type="checkbox" name="save">
-                                    <label class="form-check-label">
-                                        จำฉันไว้
-                                    </label>
-                                    &nbsp;
-                                    &nbsp;
-                                    &nbsp;
-                                    &nbsp;
-                                    &nbsp;
-                                    &nbsp;
-                                    &nbsp;
-                                    &nbsp;
-                                    &nbsp;
-                                    &nbsp;
-                                    &nbsp;
-                                    <a href="#" class="text-dark">ลืมรหัสผ่าน?</a>
-                                </left>
-                                <center>
-                                <div class="form-group row">
-                                    <label for="inputPassword" class="col-sm-2 col-form-label"></label>
-                                    <div class="col-sm-8">
-                                      <br>
-                                      <br>
-                                        <button type="submit" class="btn btn-primary btn-block">
-                                            SING IN NOW</button>
-                                    </div>
-                                    <br>
-                                </div>
-                                <br>
-                                <p>คุณยังไม่มีบัญชีใช่หรือไม่?&nbsp;&nbsp;<a href="view_register.php" class="text-dark">สร้างบัญชีตอนนี้</a></p>
-                                </center>
-                            </form>
+
+                            <br>
+                            <br>
+                            <img class="card-img-top" src="../data/images/<?=$jsonDecode['image'];?>" alt="..." />
+                            <br>
+                            <br>
+                            <br>
+                            <h5><label for="id"><b>ผู้เล่นเลขที่</b>&nbsp;:&nbsp;
+                                    <?=$jsonDecode['identifier'];?>
+                                </label></h5><!--หัวข้อ-->
+                            <h5><label for="name"><b>ชื่อ</b>&nbsp;:&nbsp;
+                                    <?=$jsonDecode['first_name'];?>
+                                </label></h5><!--หัวข้อ-->
+                            <h5><label for="last"><b>นามสกุล</b>&nbsp;:&nbsp;
+                                    <?=$jsonDecode['last_name'];?>
+                                </label></h5><!--หัวข้อ-->
+                            <h5><label for="Team"><b>สังกัดทีม</b>&nbsp;:&nbsp;
+                                    <?=$jsonDecode['team'];?>
+                                </label></h5><!--หัวข้อ-->
+                            <h5><label for="position"><b>ตำแหน่งของทีม</b>&nbsp;:&nbsp;
+                                    <?=$jsonDecode['position'];?>
+                                </label></h5><!--หัวข้อ-->
+
+
                         </div>
                         &nbsp;
                         &nbsp;
@@ -124,38 +106,43 @@
                         &nbsp;
                         &nbsp;
                         &nbsp;
-                        &nbsp;
-                        &nbsp;
-                        &nbsp;
-                        &nbsp;
-                        &nbsp;
-                        &nbsp;
-                        &nbsp;
-                        &nbsp;
+
                         <div class="col-lg-4  d-none d-lg-block">
                             <br>
-                            <img src="https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=https://raw.githubusercontent.com/katalon-studio/docs-images/master/katalon-recorder/docs/jtbd/conditional-cases/media/image3.jpeg"
-                                title="Username/Password" />
                             <br>
-                            <br>
-                            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                Scan Me..
-                                <i class="fas fa-qrcode">
-                                </i>
-                            </h3>
-                            <p>สแกนเพื่อดูบัญชีทดลองเพื่อใช้ทดสอบ..</p>
+                            <center>
+                                <img src="https://chart.googleapis.com/chart?chs=350x350&cht=qr&chl=<?=$jsonDecode['detail_user'];?>"
+                                    title="Data User" />
+                                <br>
+                                <br>
+                                <center></center>
+                                <h3>
+                                    Scan Me..
+                                    <i class="fas fa-qrcode">
+                                    </i>
+                                </h3>
+                                <p>สแกนเพื่อดูข้อมูลนักเตะแบบละเอียด..</p>
+                                <br>
+                                <a href="../index.php"><button type="button"
+                                        class="btn btn-dark">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กลับสู่หน้าหลัก
+                                        คลิกที่นี่!!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a>
                         </div>
+                        </center>
                     </div>
                     <center>
-                    <hr width="2"><hr size="4">
-                    <a href="https://web.facebook.com/profile.php?id=100086630391898" class="text-primary"><i class="fa fa-facebook-official"></i></a>
-                    &nbsp;
-                    &nbsp;
-                    <a href="https://www.secure.instagram.com/" class="text-warning"><i class="fa fa-instagram"></i></a>
-                    &nbsp;
-                    &nbsp;
-                    <a href="https://www.youtube.com/@mr.supphalakmaneepanpanit7264" class="text-danger"><i class="fa fa-youtube-square"></i></a>
-                  </center>
+                        <hr width="2">
+                        <hr size="4">
+                        <a href="https://web.facebook.com/profile.php?id=100086630391898" class="text-primary"><i
+                                class="fa fa-facebook-official"></i></a>
+                        &nbsp;
+                        &nbsp;
+                        <a href="https://www.secure.instagram.com/" class="text-warning"><i
+                                class="fa fa-instagram"></i></a>
+                        &nbsp;
+                        &nbsp;
+                        <a href="https://www.youtube.com/@mr.supphalakmaneepanpanit7264" class="text-danger"><i
+                                class="fa fa-youtube-square"></i></a>
+                    </center>
                 </div>
             </div>
         </div>
@@ -164,10 +151,9 @@
     <br>
     <br>
     <br>
-    <br>
-    <footer class="py-lg-5 bg-light ">
+    <footer class="py-lg-5 bg-dark ">
         <div class="container">
-            <p class="m-0 text-center text-dark">Copyright &copy; Nakhon Pathom
+            <p class="m-0 text-center text-light">Copyright &copy; Nakhon Pathom
                 Rajabhat University 2021</p>
         </div>
     </footer>
