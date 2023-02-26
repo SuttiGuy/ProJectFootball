@@ -37,10 +37,11 @@
                             จัดการนักเตะ
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="view/view_edit.php">แก้ไขนักเตะ</a></li>
-                            <li><a class="dropdown-item" href="view/view_delete.php">ลบนักเตะ</a></li>
+                            <li><a class="dropdown-item" href="view_edit.php?identifier=<?=$jsonDecode['identifier']?>">แก้ไขนักเตะ</a></li>
+                            <li><a class="dropdown-item" href="../index.php?identifier=<?=$jsonDecode['identifier']?>">ลบนักเตะ</a></li>
                         </ul>
                     </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -109,13 +110,9 @@
 
                         <div class="col-lg-4  d-none d-lg-block">
                             <br>
-                            <br>
                             <center>
                                 <img src="https://chart.googleapis.com/chart?chs=350x350&cht=qr&chl=<?=$jsonDecode['detail_user'];?>"
                                     title="Data User" />
-                                <br>
-                                <br>
-                                <center></center>
                                 <h3>
                                     Scan Me..
                                     <i class="fas fa-qrcode">
@@ -123,11 +120,16 @@
                                 </h3>
                                 <p>สแกนเพื่อดูข้อมูลนักเตะแบบละเอียด..</p>
                                 <br>
-                                <a href="../index.php"><button type="button"
-                                        class="btn btn-dark">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กลับสู่หน้าหลัก
+                                <a href="<?=$jsonDecode['detail_user'];?>" target="_blank"><button type="button"
+                                        class="btn btn-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เปิดรายละเอียดบนเว็บไซต์
                                         คลิกที่นี่!!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a>
+                                <br>
+                                <br>
+                                <a href="../index.php"><button type="button"
+                                        class="btn btn-outline-dark">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กลับสู่หน้าหลัก
+                                        คลิกที่นี่!!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a>
+                            </center>
                         </div>
-                        </center>
                     </div>
                     <center>
                         <hr width="2">

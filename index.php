@@ -15,7 +15,6 @@
     <link href="data/css/styles.css" rel="stylesheet" />
     <link href="data/css/css.css" rel="stylesheet" />
     <link href="data/css/body.css" rel="stylesheet" />
-
     <script src="https://kit.fontawesome.com/c150442d6f.js" crossorigin="anonymous"></script>
 </head>
 
@@ -30,17 +29,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-lg-4">
                     <li class="nav-item"><a class="nav-link" aria-current="page" href="index.php">หน้าหลัก</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            จัดการนักเตะ
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="view/view_add_form.php">เพิ่มนักเตะ</a></li>
-                            <li><a class="dropdown-item" href="view/view_edit.php">แก้ไขนักเตะ</a></li>
-                            <li><a class="dropdown-item" href="view/view_delete.php">ลบนักเตะ</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="View/view_add.php">เพิ่มตัวละครนักเตะ</a></li>
+                </ul>
             </div>
             <form class="d-flex" action="view/view_search.php" method="get">
                 <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="keywords"
@@ -50,41 +40,31 @@
             </form>
         </div>
     </nav>
+    
     <!-- Recommend-->
     <div class="container-fluid px-5 px-lg-5 my-5">
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <?php
-            include "view/view_recommend.php";
-        ?>
+                <img src="data/images/RC-1.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <?php
-            include "view/view_recommend.php";
-        ?>
+                <img src="data/images/RC-2.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <?php
-            include "view/view_recommend.php";
-        ?>
+                <img src="data/images/RC-3.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -95,14 +75,20 @@
         <div class="container-fluid px-4 px-lg-5">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-lg-4">
-                    <form action="view/view_year.php" method="GET" class="d-flex">
-                        <select class="form-control me-2" name="cs_year" id="cs_year" onchange="this.form.submit();">
+                    <form action="View/view_selects.php" method="GET" class="d-flex">
+                        <select class="form-control me-2" name="team" id="team" onchange="this.form.submit();">
                             <option disabled selected hidden><i class="fas fa-search">คลิกเพื่อกรองนักเตะตามทีม
                                     &nbsp;&nbsp;
                                     🏆</i></option>
-                            <option value="2021">??</option>
-                            <option value="2022">??</option>
-                            <option value="2023">??</option>
+                            <option value="Arsenal">Arsenal</option>
+                            <option value="Chelsea">Chelsea</option>
+                            <option value="Crystal Palace">Crystal Palace</option>
+                            <option value="Leicester">Leicester</option>
+                            <option value="Manchester City">Manchester City</option>
+                            <option value="Manchester United">Manchester United</option>
+                            <option value="Stoke">Stoke</option>
+                            <option value="Tottenham">Tottenham</option>
+                            <option value="West Brom">West Brom</option>
                         </select>
                     </form>
                 </ul>
@@ -119,13 +105,17 @@
             </div>
         </div>
     </section>
+
     <!-- footer-->
-    <footer class="py-lg-5 bg-light ">
+    <footer class="py-lg-5 bg-dark ">
         <div class="container">
-            <p class="m-0 text-center text-dark">Copyright &copy; Nakhon Pathom
+            <p class="m-0 text-center text-light">Copyright &copy; Nakhon Pathom
                 Rajabhat University 2021</p>
         </div>
     </footer>
+    <span hidden><?php include "Controller/controllerAdd.php";?></span>
+    <span hidden><?php include "Controller/controllerEdit.php";?></span>
+    <span hidden><?php include "Controller/controllerDel.php";?></span>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://unpkg.com/@popperjs/core@2"></script>

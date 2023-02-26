@@ -2,7 +2,7 @@
     include_once("../model/ConDB.php");
     include_once("../model/Course.php");
     $identifier = htmlspecialchars($_GET["identifier"]);
-    // echo $cs_id;
+
     $obj_name = new Team();
     $rs2 = $obj_name->getUserDetail($identifier);
     $jsonCode = $rs2;
