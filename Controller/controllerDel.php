@@ -1,6 +1,6 @@
 <?php
-  include_once("model/ConDB.php");
-  include_once("model/Course.php");
+  include_once("../model/ConDB.php");
+  include_once("../model/Course.php");
 
   $identifier = htmlspecialchars($_GET["identifier"]);
 

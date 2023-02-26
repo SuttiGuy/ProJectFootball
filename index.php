@@ -113,9 +113,6 @@
                 Rajabhat University 2021</p>
         </div>
     </footer>
-    <span hidden><?php include "Controller/controllerAdd.php";?></span>
-    <span hidden><?php include "Controller/controllerEdit.php";?></span>
-    <span hidden><?php include "Controller/controllerDel.php";?></span>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://unpkg.com/@popperjs/core@2"></script>

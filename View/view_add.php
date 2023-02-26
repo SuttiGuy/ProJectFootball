@@ -46,7 +46,7 @@
                         <br>
                         <br>
                         <br>
-                            <form name="frmadd" method="post" action="../index.php" enctype="multipart/form-data">              
+                            <form name="frmadd" method="post" action="view_success-add.php" enctype="multipart/form-data">              
                                 <div class="form-group row">
                                     <label for="staticFirst" class="col-sm-3 col-form-label">First_name :</label>
                                     <div class="col-sm-9">
@@ -105,9 +105,9 @@
                                     <div class="col-sm-9">
                                         <input list="image" name="image" class="form-control" placeholder="image" required>
                                         <datalist id="image">
-                                            <option value="Defender">กรุณาเลือก</option>
-                                            <option value="Goalkeeper">กรุณาเลือก</option>
-                                            <option value="Midfielder 1">กรุณาเลือก</option>
+                                            <option value="AddTest-1.gif">กรุณาเลือก</option>
+                                            <option value="AddTest-2.gif">กรุณาเลือก</option>
+                                            <option value="AddTest-3.gif 1">กรุณาเลือก</option>
                                         </datalist>
                                     </div>
                                 </div>

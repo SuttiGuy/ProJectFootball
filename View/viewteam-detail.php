@@ -38,7 +38,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="view_edit.php?identifier=<?=$jsonDecode['identifier']?>">แก้ไขนักเตะ</a></li>
-                            <li><a class="dropdown-item" href="../index.php?identifier=<?=$jsonDecode['identifier']?>">ลบนักเตะ</a></li>
+                            <li><a class="dropdown-item" href="view_success-del.php?identifier=<?=$jsonDecode['identifier']?>" onclick="return confirm('คุณต้องการจะลบข้อมูลชุดนี้หรือไม่? แน่ใจนะ!!')">ลบนักเตะ</a></li>
                         </ul>
                     </li>
                 </ul>
