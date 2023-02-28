@@ -107,7 +107,7 @@
                                         <datalist id="image">
                                             <option value="AddTest-1.gif">กรุณาเลือก</option>
                                             <option value="AddTest-2.gif">กรุณาเลือก</option>
-                                            <option value="AddTest-3.gif 1">กรุณาเลือก</option>
+                                            <option value="AddTest-3.gif">กรุณาเลือก</option>
                                         </datalist>
                                     </div>
                                 </div>
