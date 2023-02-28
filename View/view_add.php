@@ -96,7 +96,7 @@
                                 <div class="form-group row">
                                     <label for="staticLast" class="col-sm-3 col-form-label">Detail_User :</label>
                                     <div class="col-sm-9">
-                                        <input type="text" name="detail_user" class="form-control" id="detail_user" placeholder="Detail_User" required>
+                                        <input type="text" name="detail_user" class="form-control" id="detail_user" placeholder="@webside" required>
                                     </div>
                                 </div>
                             <br>
