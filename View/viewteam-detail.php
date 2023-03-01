@@ -121,13 +121,13 @@
                                 <p>สแกนเพื่อดูข้อมูลนักเตะแบบละเอียด..</p>
                                 <br>
                                 <a href="<?=$jsonDecode['detail_user'];?>" target="_blank"><button type="button"
-                                        class="btn btn-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เปิดรายละเอียดบนเว็บไซต์
-                                        คลิกที่นี่!!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a>
+                                        class="btn btn-primary">เปิดรายละเอียดบนเว็บไซต์
+                                        คลิกที่นี่!!</button></a>
                                 <br>
                                 <br>
                                 <a href="../index.php"><button type="button"
-                                        class="btn btn-outline-dark">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กลับสู่หน้าหลัก
-                                        คลิกที่นี่!!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a>
+                                        class="btn btn-outline-dark">กลับสู่หน้าหลัก
+                                        คลิกที่นี่!!</button></a>
                             </center>
                         </div>
                     </div>
